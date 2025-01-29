@@ -2,7 +2,7 @@ import { Controller, Post, Body, UseGuards } from '@nestjs/common';
 import { PharmacyService } from './pharmacy.service';
 import { AuthGuard } from '@nestjs/passport';
 
-@Controller('pharmacy')
+@Controller('pharmacy/v1')
 export class PharmacyController {
   constructor(private readonly pharmacyService: PharmacyService) {}
 
