@@ -18,7 +18,7 @@ export class PharmacyService {
     while (messages) {
       const prescription = JSON.parse(messages.content.toString());
 
-      // ✅ Check if prescriptionId, TC, Full Name, and Medicines match
+      //Check if prescriptionId, TC, Full Name, and Medicines match
       if (
         prescription.prescriptionId === prescriptionId &&
         prescription.patientTc === tc &&
@@ -49,7 +49,7 @@ export class PharmacyService {
     );
 
     if (matchedPrescription) {
-      console.log(`✅ Prescription Processed: ${JSON.stringify(matchedPrescription)}`);
+      console.log(`Prescription Processed: ${JSON.stringify(matchedPrescription)}`);
       return { status: 'Success', message: 'Prescription successfully processed!', data: matchedPrescription };
     } else {
       return { status: 'Not Found', message: 'No matching prescription found in queue.' };
